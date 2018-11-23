@@ -66,7 +66,5 @@ if __name__=='__main__':
         try:
             img,hsv=turtle.imageupdate()
             turtle.keeping(hsv) 
-        except (KeyboardInterrupt, SystemExit):
-            sys.exit(0)
         except :
            print('got error')
