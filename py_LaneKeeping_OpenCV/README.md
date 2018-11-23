@@ -35,9 +35,9 @@
   ~~~
   <br>
   
-  1.Used [HSV convert and Line Detect](https://github.com/engcang/Opencv_tutorial_Matlab_and_python/blob/master/HSD_cvt_LSD_Python) <br>
+  1.Used [HSV convert and Line Detect](https://github.com/engcang/Opencv_tutorial_Matlab_and_python/blob/master/HSD_cvt_LSD_Python) as it is <br>
 
-<br><br>
+<br>
 ### ● Turn or Straight
   ~~~python
   if yello_line[0] is None and yello_line2[0] is None:
@@ -55,6 +55,7 @@
   
   2.If **LSD.detect** returned line doesn't exist, turn to that side<br><br>
   3.Else, go straight <br><br>
+  4.That's it <br><br>
 
 ### ● Result clip, I also used this code at '[R-BIZ Challenge Turtlebot3 Autorace](http://emanual.robotis.com/docs/en/platform/turtlebot3/autonomous_driving/#autonomous-driving)'
 <p align="">
