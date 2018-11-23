@@ -55,7 +55,7 @@
 　whenever _**'Odometry'**_ data comes from _**'/odom'**_ topic  
   
   <p align="center">
-  <img src="https://github.com/engcang/image-files/blob/master/turtlebot3/kinematic_rqt_py.png" width="500"/>
+  <img src="https://github.com/engcang/image-files/blob/master/turtlebot3/kinematic_rqt_py.png" width="600"/>
   </p>
 
   </br></br>
