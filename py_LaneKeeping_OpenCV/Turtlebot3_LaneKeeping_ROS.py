@@ -10,10 +10,7 @@ import numpy as np
 import rospy
 import roslib
 import cv2
-import sys
-import signal
 
-from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import CompressedImage
 from tf.transformations import euler_from_quaternion, quaternion_from_euler
@@ -21,30 +18,17 @@ from tf.transformations import euler_from_quaternion, quaternion_from_euler
 global LSD
 LSD = cv2.createLineSegmentDetector(0)
 
-def signal_handler(signal, frame): # ctrl + c -> exit program
-        print('You pressed Ctrl+C!')
-        sys.exit(0)
-signal.signal(signal.SIGINT, signal_handler)
-
 ''' class '''
 class robot():
     def __init__(self):
         rospy.init_node('robot_controller', anonymous=True)
         self.velocity_publisher = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-        self.pose_subscriber = rospy.Subscriber('/odom', Odometry, self.callback_pose)
         self.img_subscriber = rospy.Subscriber('/raspicam_node/image/compressed',CompressedImage,self.callback_img)
 
     def callback_img(self,data):
         np_arr = np.fromstring(data.data, np.uint8)
         self.image_np = cv2.imdecode(np_arr, cv2.IMREAD_COLOR) # OpenCV >= 3.0:
         
-    def callback_pose(self, data):
-        self.pose = data.pose.pose.position
-        self.orient = data.pose.pose.orientation
-        orientation_list = [self.orient.x, self.orient.y, self.orient.z, self.orient.w]
-        (roll, pitch, yaw) = euler_from_quaternion(orientation_list)
-        self.theta = yaw
-            
     def keeping(self,hsv):
         global LSD
         vel_msg=Twist()
