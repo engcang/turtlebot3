@@ -11,9 +11,11 @@
 
 ## Robot - Turtlebot3 from ROBOTIS
 + [Turtlebot3](http://emanual.robotis.com/docs/en/platform/turtlebot3/overview/) </br>
+<br>
 
 ## Code explanation 
 ***
+
 ### ● After image HSV converted and masked, Line detect
   ~~~python
   def keeping(self,hsv):
@@ -33,7 +35,7 @@
   ~~~
   <br>
   
-  1.Used [HSV convert and Line Detect](https://github.com/engcang/Opencv_tutorial_Matlab_and_python/blob/master/HSD_cvt_LSD_Python) <br><br>
+  1.Used [HSV convert and Line Detect](https://github.com/engcang/Opencv_tutorial_Matlab_and_python/blob/master/HSD_cvt_LSD_Python) <br>
 
 <br><br>
 ### ● Turn or Straight
@@ -49,7 +51,8 @@
       vel_msg.angular.z = 0
   self.velocity_publisher.publish(vel_msg)
   ~~~
- 
+  <br>
+  
   2.If **LSD.detect** returned line doesn't exist, turn to that side<br><br>
   3.Else, go straight <br><br>
 
