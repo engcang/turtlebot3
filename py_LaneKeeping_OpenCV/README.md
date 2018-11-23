@@ -36,8 +36,8 @@
   <br>
   
   1.Used [HSV convert and Line Detect](https://github.com/engcang/Opencv_tutorial_Matlab_and_python/blob/master/HSD_cvt_LSD_Python) as it is <br>
-
 <br>
+
 ### ● Turn or Straight
   ~~~python
   if yello_line[0] is None and yello_line2[0] is None:
