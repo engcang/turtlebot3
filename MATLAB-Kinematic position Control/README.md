@@ -41,7 +41,7 @@
   </br>
   This block initialize ROS connection and make nodes subscribes and publishes the messages under topics
   <p align="center">
-  <img src="https://github.com/engcang/image-files/blob/master/turtlebot3/kinematic_rqt_MAT.png" width="450"/>
+  <img src="https://github.com/engcang/image-files/blob/master/turtlebot3/kinematic_rqt_MAT.png" width="500"/>
   </p>
 
   </br></br>
